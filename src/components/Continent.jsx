@@ -8,8 +8,9 @@ const Continent = ({ continent }) => {
   const {
     name, population, cases, deaths, recovered,
   } = continent;
+
   return (
-    <NavLink to="details" className="flex flex-col items-end border-2 p-2">
+    <NavLink to={`details/${name}`} className="flex flex-col items-end border-2 p-2">
       <div>
         <FaArrowCircleRight />
       </div>
