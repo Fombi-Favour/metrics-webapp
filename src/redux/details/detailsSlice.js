@@ -10,7 +10,15 @@ export const fetchCountries = createAsyncThunk('details/fetchCountries', async (
   const base = `${url}${name}`;
   const response = await fetch(base);
   const res = await response.json();
-  return { ...res, name };
+  return res.map((item) => ({
+    name: item.country,
+    flag: item.countryInfo.flag,
+    continent: item.continent,
+    population: item.population,
+    cases: item.cases,
+    deaths: item.deaths,
+    recovered: item.recovered,
+  }));
 });
 
 const detailsSlice = createSlice({
