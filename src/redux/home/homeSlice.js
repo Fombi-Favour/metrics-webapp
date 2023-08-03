@@ -3,6 +3,7 @@ import { v4 as uuid } from 'uuid';
 
 const initialState = {
   contents: [],
+  continent: [],
   isloading: false,
 };
 const url = 'https://corona.lmao.ninja/v2/continents';
@@ -10,6 +11,7 @@ const url = 'https://corona.lmao.ninja/v2/continents';
 export const fetchContinents = createAsyncThunk('home/fetchContinents', async () => {
   const response = await fetch(url);
   const res = await response.json();
+  console.log(res);
   return res.map((item) => ({
     id: uuid(),
     name: item.continent,
@@ -20,17 +22,14 @@ export const fetchContinents = createAsyncThunk('home/fetchContinents', async ()
   }));
 });
 
-export const fetchContinent = createAsyncThunk('home/fetchContinent', async (continentName) => {
-  const base = `${url}/${continentName}`;
-  // const response = await fetch(base);
-  // const newContinent = {
-  //   name: response.continent,
-  //   population: response.population,
-  //   cases: response.cases,
-  //   deaths: response.deaths,
-  //   recovered: response.recovered,
-  // };
-  console.log(base);
+export const fetchContinent = createAsyncThunk('home/fetchContinent', async (name) => {
+  const base = `${url}/${name}`;
+  const response = await fetch(base);
+  if (!response.ok) {
+    throw new Error('Failure fetching');
+  }
+  const data = await response.json();
+  return { ...data, name };
 });
 
 const homeSlice = createSlice({
@@ -50,6 +49,19 @@ const homeSlice = createSlice({
       .addCase(fetchContinents.rejected, (state) => ({
         ...state,
         isloading: false,
+      }))
+      .addCase(fetchContinent.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(fetchContinent.fulfilled, (state, action) => ({
+        ...state,
+        continent: action.payload,
+        isLoading: false,
+      }))
+      .addCase(fetchContinent.rejected, (state) => ({
+        ...state,
+        isLoading: false,
       }));
   },
 });
