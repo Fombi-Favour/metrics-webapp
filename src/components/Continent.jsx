@@ -45,7 +45,13 @@ const Continent = ({ continent }) => {
 };
 
 Continent.propTypes = {
-  continent: PropTypes.objectOf(PropTypes.string).isRequired,
+  continent: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    population: PropTypes.number.isRequired,
+    cases: PropTypes.number.isRequired,
+    deaths: PropTypes.number.isRequired,
+    recovered: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default Continent;
