@@ -20,7 +20,7 @@ const Home = () => {
         <img src={World} alt="world-map" className="w-80 md:w-[24rem]" />
         <div className="flex flex-col">
           <h3 className="text-[1.654rem] font-semibold">The World</h3>
-          <span className="">6,958 cases</span>
+          <span className="text-[1.174rem]">6,958 cases</span>
         </div>
       </div>
       {/* searching sub-section */}
