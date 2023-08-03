@@ -1,70 +1,171 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
+  
+<div align="center">
+ 
+  <img src="wave.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3><b>"Metrics-Webapp" project</b></h3>
 
-## Available Scripts
+</div>
 
-In the project directory, you can run:
+# 📗 Table of Contents
 
-### `npm start`
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 📖 "COVID-19 Cases Tracker 🦠" project <a name="about-project"></a>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+**"COVID-19 Cases Tracker" project** is a responsive tracking website that displays information of cases in different countries, continents and in the whole world. All of these information is fetch from this API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Continents API](https://corona.lmao.ninja/v2/continents)
+- [Countries API](https://corona.lmao.ninja/v2/countries/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Built With <a name="built-with"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tech Stack <a name="tech-stack"></a>
 
-### `npm run eject`
+<details>
+  <summary>Version Control System</summary>
+  <ul>
+    <li><a href="https://git-scm.com/">Git</a></li>
+  </ul>
+</details>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<details>
+  <summary>Framework</summary>
+  <ul>
+    <li><a href="https://react.dev/">React JS</a></li>
+    <li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
+  </ul>
+</details>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<details>
+  <summary>Library</summary>
+  <ul>
+    <li><a href="https://redux.js.org/">Redux</a></li>
+  </ul>
+</details>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Key Features <a name="key-features"></a>
 
-## Learn More
+- **Beautiful layouts**
+- **Cool display of the continents and the countries information**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
-### Code Splitting
+- [Live Demo Link. Click here!](https://bookstore-djyd.onrender.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-### Analyzing the Bundle Size
+## 💻 Getting Started <a name="getting-started"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To get a local copy up and running, follow these steps.
 
-### Making a Progressive Web App
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+In order to run this project you need:
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **A code editor of your choice (like vs code or Atom and so on)**
+ - **Version Control System (git is preferred)**
+ 
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  cd metrics-webapp/
+  git clone https://github.com/Fombi-Favour/metrics-webapp.git
+```
+### Run tests
+- Check CSS style linter error by running this command:
+`npx stylelint "**/*.{css,scss}"`
+- Check JavaScript linter error by running this command:
+`npx eslint "**/*.{js,jsx}"`
+
+### Install
+1.- Install the project's dependencies by running this command:   
+`npm install`  
+2.- Generate the dist folder using this command:  
+`npm run build`
+
+### Usage
+1.- Run this command to see the page `npm start`  
+2.- To see the code open the project in the code editor of your preference.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You can deploy this project on github following instructions here:
+[deploy website on github](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
-### `npm run build` fails to minify
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## 👥 Author <a name="authors"></a>
+
+👤 **Fombi Magnus-Favour**
+
+- GitHub: [Fombi-Favour](https://github.com/Fombi-Favour)
+- Twitter: [@FavourFombi](https://twitter.com/FavourFombi)
+- LinkedIn: [Fombi Favour](https://www.linkedin.com/in/fombi-favour/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+-  **Add styles on the page**
+-  **Add components for a better SPA**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Fombi-Favour/metrics-webapp/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## ⭐️ Show your support <a name="support"></a>
+
+Make sure you give a ⭐ and follow me if like this project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+  - Full design from [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) (author of the original design)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./MIT.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
