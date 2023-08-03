@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { v4 as uuid } from 'uuid';
 
 const initialState = {
   value: [],
@@ -12,7 +11,8 @@ export const fetchCountries = createAsyncThunk('details/fetchCountries', async (
   const res = await response.json();
   console.log(res);
   return res.map((item) => ({
-    id: uuid(),
+    // eslint-disable-next-line no-underscore-dangle
+    id: item.countryInfo._id,
     country: item.country,
     flag: item.countryInfo.flag,
     continent: item.continent,
