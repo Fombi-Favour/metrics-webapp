@@ -6,13 +6,11 @@ const initialState = {
 };
 const url = 'https://corona.lmao.ninja/v2/countries/';
 
-export const fetchCountries = createAsyncThunk('details/fetchCountries', async () => {
-  const response = await fetch(`${url}`);
+export const fetchCountries = createAsyncThunk('details/fetchCountries', async (countries) => {
+  const base = `${url}/${countries}`;
+  const response = await fetch(base);
   const res = await response.json();
-  console.log(res);
-  return res.map((item) => ({
-    // eslint-disable-next-line no-underscore-dangle
-    id: item.countryInfo._id,
+  return res.forEach((item) => ({
     country: item.country,
     flag: item.countryInfo.flag,
     continent: item.continent,
@@ -27,6 +25,21 @@ const detailsSlice = createSlice({
   name: 'details',
   initialState,
   reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(fetchCountries.pending, (state) => ({
+      ...state,
+      isloading: true,
+    }))
+      .addCase(fetchCountries.fulfilled, (state, action) => ({
+        ...state,
+        isloading: false,
+        value: action.payload,
+      }))
+      .addCase(fetchCountries.rejected, (state) => ({
+        ...state,
+        isloading: false,
+      }));
+  },
 });
 
 export default detailsSlice.reducer;
