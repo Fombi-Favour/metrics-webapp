@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { v4 as uuid } from 'uuid';
 
 const initialState = {
   contents: [],
@@ -12,7 +11,6 @@ export const fetchContinents = createAsyncThunk('home/fetchContinents', async ()
   const response = await fetch(url);
   const res = await response.json();
   return res.map((item) => ({
-    id: uuid(),
     name: item.continent,
     population: item.population,
     cases: item.cases,
