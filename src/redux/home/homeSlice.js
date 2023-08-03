@@ -11,7 +11,6 @@ const url = 'https://corona.lmao.ninja/v2/continents';
 export const fetchContinents = createAsyncThunk('home/fetchContinents', async () => {
   const response = await fetch(url);
   const res = await response.json();
-  console.log(res);
   return res.map((item) => ({
     id: uuid(),
     name: item.continent,
@@ -19,6 +18,7 @@ export const fetchContinents = createAsyncThunk('home/fetchContinents', async ()
     cases: item.cases,
     deaths: item.deaths,
     recovered: item.recovered,
+    countries: item.countries,
   }));
 });
 
