@@ -32,7 +32,8 @@
 
 # 📖 "COVID-19 Cases Tracker 🦠" project <a name="about-project"></a>
 
-
+![mobile (1)](https://github.com/Fombi-Favour/metrics-webapp/assets/77404317/ae5e5b5c-3c35-47bf-8ea7-4acd6769b8a0)
+![mobile (2)](https://github.com/Fombi-Favour/metrics-webapp/assets/77404317/8c9f87b5-a8a4-4bc2-97f2-400cd9db10ba)
 
 **"COVID-19 Cases Tracker" project** is a responsive tracking website that displays information of cases in different countries, continents and in the whole world. All of these information is fetch from this API
 
