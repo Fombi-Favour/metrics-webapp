@@ -6,23 +6,21 @@ import Country from './Country';
 const Countries = () => {
   const dispatch = useDispatch();
   const { countries } = useSelector((state) => state.home.continent);
-  console.log(countries);
-  const countriesString = countries?.toString();
-  console.log(countriesString);
+  const countryString = countries?.toString();
 
   useEffect(() => {
-    if (countries) {
-      dispatch(fetchCountries(countries));
+    if (countryString) {
+      dispatch(fetchCountries(countryString));
     }
-  }, [dispatch, countries]);
+  }, [dispatch, countryString]);
 
-  const { data } = useSelector((state) => state.details.valueList);
-  console.log(data);
+  const { valueList } = useSelector((state) => state.details);
 
   return (
     <main>
-      {data.map((index) => (<Country key={index.country} country={index} />))}
-      data
+      {valueList.map((item) => (
+        <Country key={item.name} country={item} />
+      ))}
     </main>
   );
 };
