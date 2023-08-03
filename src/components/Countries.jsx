@@ -6,8 +6,9 @@ import Country from './Country';
 const Countries = () => {
   const dispatch = useDispatch();
   const { countries } = useSelector((state) => state.home.continent);
-  //   const countriesString = countries?.toString();
-  //   console.log(countriesString);
+  console.log(countries);
+  const countriesString = countries?.toString();
+  console.log(countriesString);
 
   useEffect(() => {
     if (countries) {
@@ -15,12 +16,13 @@ const Countries = () => {
     }
   }, [dispatch, countries]);
 
-  const data = useSelector((state) => state.details.value);
+  const { data } = useSelector((state) => state.details.valueList);
   console.log(data);
 
   return (
     <main>
-      {data.map((index) => (<Country key={index.country} />))}
+      {data.map((index) => (<Country key={index.country} country={index} />))}
+      data
     </main>
   );
 };
