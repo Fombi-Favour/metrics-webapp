@@ -123,6 +123,10 @@ Clone this repository to your desired folder:
 1.- Run this command to see the page `npm start`  
 2.- To see the code open the project in the code editor of your preference.
 
+## Warning ⚠️ 
+- Make sure your internet is stable to view every information (mostly the details page).
+- Every time you visit the details page the second time, make sure you refresh the page to view updates.
+
 ### Deployment
 
 You can deploy this project on github following instructions here:
