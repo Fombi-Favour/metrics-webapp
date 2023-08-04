@@ -74,11 +74,11 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link. Click here!](https://bookstore-djyd.onrender.com/)
+- [Live Demo Link. Click here!](https://covid-19-ct.netlify.app/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🎥 Presentation <a name="live-demo"></a>
 
