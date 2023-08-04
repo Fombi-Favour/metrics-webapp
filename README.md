@@ -80,6 +80,12 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
+## 🎥 Presentation <a name="live-demo"></a>
+
+- Check out the presentation for this project [Click here!](https://www.loom.com/share/d66523b5ec07413c8b23c4582bd99e7f?sid=5147dce9-b707-4f57-8c9c-70db11e177b4)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
