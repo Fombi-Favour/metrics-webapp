@@ -15,7 +15,7 @@ const Navbar = () => {
       <>
         <span className="font-bold">The World Map</span>
         <div className="flex items-center gap-2">
-          <img src={Logo} alt="logo" className="w-12" />
+          <img src={Logo} alt="logo" className="w-10 md:w-12" />
           <span className="text-lg font-medium">COVID-19 Cases</span>
         </div>
       </>
@@ -28,7 +28,7 @@ const Navbar = () => {
           <span className="font-bold text-xl">{name}</span>
         </div>
         <div className="flex items-center gap-2">
-          <img src={Logo} alt="logo" className="w-12" />
+          <img src={Logo} alt="logo" className="w-10 md:w-12" />
           <span className="font-semibold text-xl">{`${name}'s Cases`}</span>
         </div>
       </>
