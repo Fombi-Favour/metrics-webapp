@@ -8,7 +8,7 @@ const Home = () => {
   const [search, setSearch] = useState('');
   const [total, setTotal] = useState(0);
   const dispatch = useDispatch();
-  const { contents } = useSelector((state) => state.home);
+  const { contents, isloading } = useSelector((state) => state.home);
 
   useEffect(() => {
     dispatch(fetchContinents());
@@ -50,9 +50,16 @@ const Home = () => {
       </div>
       {/* listing sub-section: fetched from api */}
       <main className="flex flex-wrap gap-3 justify-center py-4 mb-5">
-        {filteredContinent.map((item) => (
-          <Continent key={item.name} continent={item} />
-        ))}
+        {isloading ? (
+          <div className="flex items-center justify-center mt-20 gap-3">
+            <div className="border-8 border-white border-t-[#da2d72] w-20 h-20 text-transparent rounded-full animate-spin">100%</div>
+            <h2 className="text-4xl text-white">Loading...</h2>
+          </div>
+        ) : (
+          filteredContinent.map((item) => (
+            <Continent key={item.name} continent={item} />
+          ))
+        )}
       </main>
     </section>
   );
