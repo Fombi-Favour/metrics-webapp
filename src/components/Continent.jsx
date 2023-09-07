@@ -10,11 +10,11 @@ const Continent = ({ continent }) => {
   } = continent;
 
   return (
-    <NavLink to={`details/${name}`} className="flex flex-col items-end border-2 p-2">
+    <NavLink to={`details/${name}`} className="flex flex-col items-end rounded-lg bg-[#fb5092] even:bg-[#da2d72] hover:bg-[#da2d72] hover:even:bg-[#fb5092] hover:transition-all transition-all p-2 md:p-3">
       <div>
         <FaArrowCircleRight />
       </div>
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1 md:gap-3">
         <img src={imageContinent[name]} alt={name} className="w-48" />
         <div className="flex flex-col">
           <h3 className="font-bold text-xl">{name}</h3>
