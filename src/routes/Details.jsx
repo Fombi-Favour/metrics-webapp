@@ -9,6 +9,7 @@ const Details = () => {
   const dispatch = useDispatch();
   const { name } = useParams();
   const { continent } = useSelector((state) => state.home);
+  const { isloading } = useSelector((state) => state.details);
 
   useEffect(() => {
     dispatch(fetchContinent(name));
@@ -35,7 +36,14 @@ const Details = () => {
         </h3>
       </div>
       {/* countries list sub-section */}
-      <Countries />
+      {isloading ? (
+        <div className="flex items-center justify-center mt-20 gap-3">
+          <div className="border-8 border-white border-t-[#da2d72] w-20 h-20 text-transparent rounded-full animate-spin">100%</div>
+          <h2 className="text-4xl text-white">Loading...</h2>
+        </div>
+      ) : (
+        <Countries />
+      )}
     </section>
   );
 };
