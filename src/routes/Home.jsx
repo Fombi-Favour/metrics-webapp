@@ -49,7 +49,7 @@ const Home = () => {
         />
       </div>
       {/* listing sub-section: fetched from api */}
-      <main className="flex flex-wrap gap-3 justify-center py-4 mb-5">
+      <main className="flex flex-row flex-wrap gap-1 justify-center w-full p-0 mb-5">
         {isloading ? (
           <div className="flex items-center justify-center mt-20 gap-3">
             <div className="border-8 border-white border-t-[#da2d72] w-20 h-20 text-transparent rounded-full animate-spin">100%</div>
